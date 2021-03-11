@@ -9,13 +9,30 @@
   </head>
   <body>
     <header>
-      <h1>Electra Heart</h1>
+      <div class="header__title">
+        <img src="./assets/img/heart.svg" alt="heart" />
+        <h1>Electra Heart</h1>
+        <img src="./assets/img/heart.svg" alt="heart" />
+      </div>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#introduction">Introduction</a>
+            </li>
+            <li><a href="#characters">Marina & son alter ego</a></li>
+            <li><a href="#videos">Chansons</a></li>
+            <li><a href="#links">Liens utiles</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-      <section class="introduction">
+      <section id="introduction" class="block">
         <img
           src="./assets/img/album-cover.jpg"
           srcset="./assets/img/album-cover-360.jpg 360w"
+          sizes="100%"
           alt="album cover"
         />
         <p>
@@ -25,40 +42,51 @@
           chansons de l'album.
         </p>
       </section>
-      <section>
-        <img
-          src="./assets/img/electra-heart-character.png"
-          alt="Electra Heart personnage"
-        />
-        <p>
-          Electra Heart nous raconte son hsitoire sous forme de tragédie éléctro
-          pop. Passant de l'adolescence à l'âge adulte, elle essaye de surmonter
-          ses troubles psychologiques : dépression et anxiété. Elle décrit son
-          parcours à travers des thèmes tels que l'adolescence, le rôle du
-          genre, ou la sexualité. Afin de se construire, elle incarne 4
-          archétypes qu'elle désigne par "Housewife", "Homewrecker", "Idle Teen"
-          et "Beauty Queen".
-        </p>
+      <hr />
+      <section id="characters">
+        <h2>Marina & son alter ego</h2>
+
+        <div id="characters__electra" class="block">
+          <img
+            src="./assets/img/electra-heart-character.png"
+            alt="Electra Heart personnage"
+          />
+          <h3>Electra Heart</h3>
+          <p>
+            Electra Heart nous raconte son hsitoire sous forme de tragédie
+            éléctro pop. Passant de l'adolescence à l'âge adulte, elle essaye de
+            surmonter ses troubles psychologiques : dépression et anxiété. Elle
+            décrit son parcours à travers des thèmes tels que l'adolescence, le
+            rôle du genre, ou la sexualité. Afin de se construire, elle incarne
+            4 archétypes qu'elle désigne par "Housewife", "Homewrecker", "Idle
+            Teen" et "Beauty Queen".
+          </p>
+        </div>
+        <div id="characters__marina" class="block">
+          <img
+            src="./assets/img/marina.png"
+            srcset="./assets/img/marina-360px.png 360w"
+            sizes="100%"
+            alt="Marina chanteuse"
+          />
+          <h3>Marina Diamandis</h3>
+          <p>
+            Marina Lambrini Diamandis est une chanteuse galloise d'origine
+            grecque. A 35 ans, elle a déjà sorti 4 albums . Elle fait
+            principalement de l'indie pop et a la particularité de changer
+            entièrement d'univers graphique à chaque album.
+          </p>
+        </div>
       </section>
-      <section>
-        <img
-          src="./assets/img/marina.png"
-          srcset="./assets/img/marina-360px.png 360w"
-          alt="Marina chanteuse"
-        />
-        <p>
-          Marina Lambrini Diamandis est une chanteuse galloise d'origine
-          grecque. A 35 ans, elle a déjà sorti 4 albums . Elle fait
-          principalement de l'indie pop et a la particularité de changer
-          entièrement d'univers graphique à chaque album.
-        </p>
-      </section>
-      <section>
-        <h1>1. Bubblegum Bitch</h1>
-        <div>
+      <hr />
+      <section id="videos">
+        <h2>Chansons - notre top 5</h2>
+        <div class="videos__And__Description block">
+          <h2>1. Bubblegum Bitch</h2>
+
           <iframe
-            width="560"
-            height="315"
+            width="100%"
+            height="auto"
             src="https://www.youtube.com/embed/VOn6i2spFIY"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -71,12 +99,12 @@
             égocentrique, elle semble insouciante et heureuse.
           </p>
         </div>
-        <h1>2. Primadonna</h1>
 
-        <div>
+        <div class="videos__And__Description block">
+          <h2>2. Primadonna</h2>
           <iframe
-            width="560"
-            height="315"
+            width="100%"
+            height="auto"
             src="https://www.youtube.com/embed/Gj5L9SYhoSE"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -89,11 +117,12 @@
             sa seule source de bonheur.
           </p>
         </div>
-        <h1>3. Teen Idle</h1>
-        <div>
+        <div class="videos__And__Description block">
+          <h2>3. Teen Idle</h2>
+
           <iframe
-            width="560"
-            height="315"
+            width="100%"
+            height="auto"
             src="https://www.youtube.com/embed/ifa2g8HPZOY"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -106,11 +135,12 @@
             désir d'être une femme parfaite, adorée et admirée par tous.
           </p>
         </div>
-        <h1>4. Lies</h1>
-        <div>
+        <div class="videos__And__Description block">
+          <h2>4. Lies</h2>
+
           <iframe
-            width="560"
-            height="315"
+            width="100%"
+            height="auto"
             src="https://www.youtube.com/embed/MsnlBtlimBA"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -123,11 +153,12 @@
             subira toujours les sentiments douloureux d'une rupture.
           </p>
         </div>
-        <h1>5. State of Dreaming</h1>
-        <div>
+        <div class="videos__And__Description block">
+          <h2>5. State of Dreaming</h2>
+
           <iframe
-            width="560"
-            height="315"
+            width="100%"
+            height="auto"
             src="https://www.youtube.com/embed/w-atCFjrqsA"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -143,11 +174,13 @@
           </p>
         </div>
       </section>
-      <section>
+      <hr />
+      <section id="comments" class="block">
         <h1>Commentaire de l'artiste</h1>
         <img
           src="./assets/img/marina-2.png"
           srcset="./assets/img/marina-2-360px.png 360w"
+          sizes="100%"
           alt="marina picture 2"
         />
         <p>
@@ -159,7 +192,8 @@
           And that happens a lot when your very ambitious.”
         </p>
       </section>
-      <section>
+      <hr />
+      <section id="links">
         <h1>Liens utiles</h1>
         <nav>
           <ul>
