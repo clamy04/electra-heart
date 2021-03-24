@@ -26,6 +26,7 @@ html {
   background-color: hsl(225, 100%, 90%);
 }
 // -----------le header -------------------
+
 header {
   display: flex;
   flex-direction: column;
@@ -37,6 +38,13 @@ header {
   justify-content: center;
   margin: 3vh;
 }
+main {
+  @include bigsize {
+    background-image: url("./assets/img/background.jpg");
+    background-attachment: fixed;
+  }
+}
+// ------ police commune des h1 2 et 3 ----------
 h1,
 h2,
 h3 {
@@ -50,8 +58,12 @@ h1 {
 }
 h2 {
   margin: 30px 0px;
+  @include bigsize {
+    margin-top: 5vh;
+    font-size: 2rem;
+  }
 }
-
+// le menu nav horizontal en desktop et vertical en version mobile
 ul {
   list-style-type: none;
   display: flex;
@@ -81,43 +93,118 @@ li a {
 header img {
   width: 4vh;
 }
-
+// --------blocs blanc communs aux différentes sections-----
 .block {
   background-color: white;
   padding: 20px;
-  margin: 40px 20px;
+  //
 }
+// --------------section d'intro -------------
 #introduction {
+  height: 100vh;
+  @include bigsize {
+    padding: 30px;
+  }
+}
+#introduction__div {
   @include bigsize {
     display: flex;
     background: none;
     align-items: center;
   }
 }
-#introduction div {
+#introduction__div > div {
   @include bigsize {
     margin: 2vw;
+  }
+}
+#introduction img {
+  @include bigsize {
+    width: 60vw;
   }
 }
 .text {
   @include bigsize {
     background: white;
     height: 30vh;
+    width: 80vw;
     padding: 30px;
   }
 }
+// ------------------page personnages-----------------
+#characters {
+  @include bigsize {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+}
+#characters__div {
+  @include bigsize {
+    display: flex;
 
+    justify-content: center;
+    align-items: center;
+  }
+}
+#characters__div > .block {
+  @include bigsize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    width: 40vw;
+    height: 70vh;
+    margin: 30px;
+  }
+}
+#characters img {
+  @include bigsize {
+    width: 17vw;
+    margin: 10px 0;
+  }
+}
 p {
   font-family: "Montserrat";
   text-align: justify;
   margin: 10px;
+  @include bigsize {
+    font-size: 0.9rem;
+  }
 }
 hr {
   height: 10px;
   border: 0;
   box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  @include bigsize {
+    display: none;
+  }
+}
+#videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.videos__And__Description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 20px;
+  @include bigsize {
+    width: 70vw;
+  }
 }
 
+iframe {
+  width: 100%;
+  height: auto;
+  @include bigsize {
+    width: 560px;
+    height: 315px;
+  }
+}
 #links {
   border: 1px solid;
   display: flex;
@@ -125,7 +212,9 @@ hr {
   align-items: center;
   margin: 20vh 5vw;
 }
-
+#introduction h2 {
+  margin: 0;
+}
 #links h2 {
   margin: 5vh 0vh;
 }
