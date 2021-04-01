@@ -42,6 +42,8 @@ main {
   @include bigsize {
     background-image: url("./assets/img/background.jpg");
     background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
   }
 }
 // ------ police commune des h1 2 et 3 ----------
@@ -63,7 +65,19 @@ h2 {
     font-size: 2rem;
   }
 }
+#introduction h2,
+#characters h2,
+#videos > h2 {
+  @include bigsize {
+    color: white;
+  }
+}
 // le menu nav horizontal en desktop et vertical en version mobile
+.header__options {
+  @include bigsize {
+    margin-bottom: 5vh;
+  }
+}
 ul {
   list-style-type: none;
   display: flex;
@@ -97,6 +111,7 @@ header img {
 .block {
   background-color: white;
   padding: 20px;
+
   //
 }
 // --------------section d'intro -------------
@@ -129,7 +144,19 @@ header img {
     height: 30vh;
     width: 80vw;
     padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
+}
+#introduction a {
+  background-color: #eba9dd;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-family: "Montserrat";
+  text-decoration: none;
 }
 // ------------------page personnages-----------------
 #characters {
@@ -182,12 +209,14 @@ hr {
     display: none;
   }
 }
+// ------partie avec les vidéos ---------------
 #videos {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.videos__And__Description {
+.videos__And__Description,
+#comments {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,7 +225,9 @@ hr {
     width: 70vw;
   }
 }
-
+.videos__And__Description p {
+  padding: 30px;
+}
 iframe {
   width: 100%;
   height: auto;
@@ -205,12 +236,28 @@ iframe {
     height: 315px;
   }
 }
+// section avec les liens vers les réseaux sociaux
 #links {
   border: 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20vh 5vw;
+  @include bigsize {
+    background-color: white;
+    width: 30vw;
+    margin: 10vh auto;
+  }
+}
+.links__figures {
+  @include bigsize {
+    display: flex;
+  }
+}
+#links img {
+  @include bigsize {
+    width: 50%;
+  }
 }
 #introduction h2 {
   margin: 0;
@@ -222,10 +269,17 @@ figure {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 15px;
 }
 figure img {
   width: 10vw;
+  @include bigsize {
+    margin: 10px;
+  }
+}
+figcaption {
+  text-align: center;
 }
 figcaption a {
   font-family: "Cooper Black";
@@ -233,6 +287,14 @@ figcaption a {
   font-size: 0.8rem;
   text-decoration: none;
 }
+#comments {
+  margin: auto;
+  @include bigsize {
+    padding: 5vw;
+    width: 50vw;
+  }
+}
+// ----footer--------------
 footer {
   background-color: black;
   color: white;
