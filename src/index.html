@@ -22,6 +22,7 @@
             </li>
             <li><a href="#characters">Marina & son alter ego</a></li>
             <li><a href="#videos">Chansons</a></li>
+            <li><a href="#comments">Commentaire de l'artiste</a></li>
             <li><a href="#links">Liens utiles</a></li>
           </ul>
         </nav>
@@ -49,8 +50,8 @@
             </p>
             <a
               target="_blank"
-              href="https://open.spotify.com/album/5N1aNUXaHDD7YsjhbCM9JZ"
-              >Découvrir</a
+              href="https://shop.marinaofficial.co.uk/eu/music/electra-heart-cd.html"
+              >Acheter le disque</a
             >
           </div>
         </div>
@@ -192,13 +193,8 @@
       <hr />
       <section id="comments" class="block">
         <h2>Commentaire de l'artiste</h2>
-        <img
-          src="./assets/img/marina-2.png"
-          srcset="./assets/img/marina-2-360px.png 360w"
-          sizes="100%"
-          alt="marina picture 2"
-        />
-        <p>
+        <img src="./assets/img/marina-2.png" alt="marina picture 2" />
+        <p id="visible" class="visible">
           “Electra Heart is the antithesis of everything that I stand for. And
           the point of introducing her and building a whole concept around her
           is that she stands for the corrupt side of American Ideology, and
@@ -206,6 +202,15 @@
           anyone’s worst fear- is losing myself and becoming a vacuous person.
           And that happens a lot when your very ambitious.”
         </p>
+        <p id="hidden" class="hidden">
+          "Electra Heart à l'opposé de toutes les valeurs que je soutiens. Le
+          fait de la présenter et de créer tout un concept autour d'elle montre
+          qu'elle représente le côté corrompu de l'idéologie américaine, qui est
+          aussi le vôtre. Ma plus grande peur, comme tout le monde, serait de me
+          perdre moi-même et de devenir une personne vide. Cela arrive beaucoup
+          lorsque vous êtes ambitieux."
+        </p>
+        <button onclick="hide()">Cliquez pour traduire</button>
       </section>
       <hr />
       <section id="links">
@@ -239,6 +244,15 @@
         </div>
       </section>
     </main>
+    <script>
+      function hide() {
+        var hide = document.getElementById("visible");
+        var show = document.getElementById("hidden");
+        hide.classList.replace("visible", "hidden");
+        hide.id = "hidden";
+        show.id = "visible";
+      }
+    </script>
     <footer>
       <p>Site web fictif créé par Clarouf la ouf ©</p>
     </footer>
